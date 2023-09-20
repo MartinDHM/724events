@@ -130,7 +130,7 @@ const Page = () => {
           title={last?.title}
           date={new Date(last?.date)}
           small
-          label={last.type}
+          label={last?.type}
         />
         {console.log(last)}
       </div>
