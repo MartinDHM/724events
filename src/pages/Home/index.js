@@ -125,13 +125,14 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
+        {data === null ? ("loading") : (
         <EventCard
           imageSrc={last?.cover}
           title={last?.title}
           date={new Date(last?.date)}
           small
           label={last?.type}
-        />
+        />)}
         {console.log(last)}
       </div>
       <div className="col contact">
