@@ -30,15 +30,27 @@ describe("When Form is created", () => {
 
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
-    // to implement
+    render(<Home />);
+    const eventList = screen.findByTestId("eventList-testid");
+    expect(eventList).toBeDefined;
   })
+
   it("a list a people is displayed", () => {
-    // to implement
+    render(<Home/>);
+    const peopleList = screen.findByTestId("peopleList-testid");
+    expect(peopleList).toBeDefined;
   })
-  it("a footer is displayed", () => {
-    // to implement
+
+  it("a footer is displayed", async () => {
+    render(<Home/>);
+    const footerDisplay = screen.findByTestId("footer-testid");
+    expect(footerDisplay).toBeDefined;
   })
+
   it("an event card, with the last event, is displayed", () => {
-    // to implement
+    render(<Home/>);
+    const lastEvent = screen.findByTestId("lastEvent-testid");
+    expect(lastEvent).toBeDefined;
   })
+  
 });
