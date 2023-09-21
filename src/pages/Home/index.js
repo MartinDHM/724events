@@ -17,7 +17,7 @@ const Page = () => {
 
   // ajout de la constant last qui tri les événement dans l'ordre décroissant de réalisation 
   const last = data?.events.sort((evtA, evtB) =>
-    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
+    new Date(evtA.date) < new Date(evtB.date) ? 1 : -1
   )[0];
 
   return <>

@@ -37,7 +37,7 @@ describe("When a page is created", () => {
 
   it("a list a people is displayed", async () => {
     render(<Home/>);
-    await screen.findByTestId("peopleList-testid");
+     await screen.findByTestId("peopleList-testid");
   
   })
 
