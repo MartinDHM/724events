@@ -35,16 +35,16 @@ describe("When a page is created", () => {
     expect(eventList).toBeDefined;
   })
 
-  it("a list a people is displayed", () => {
+  it("a list a people is displayed", async () => {
     render(<Home/>);
-    const peopleList = screen.findByTestId("peopleList-testid");
-    expect(peopleList).toBeDefined;
+    await screen.findByTestId("peopleList-testid");
+  
   })
 
   it("a footer is displayed", async () => {
     render(<Home/>);
-    const footerDisplay = screen.findByTestId("footer-testid");
-    expect(footerDisplay).toBeDefined;
+    await screen.findByTestId("footer-testid");
+  
   })
 
   it("an event card, with the last event, is displayed", () => {
