@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./style.scss";
@@ -13,13 +13,15 @@ const Select = ({
   label,
   type = "normal",
 }) => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(null); // Initial value should be null, not undefined
   const [collapsed, setCollapsed] = useState(true);
+
   const changeValue = (newValue) => {
-    onChange(newValue); // ajout de "newValue" dans onChange car manquant
+    onChange(newValue);
     setValue(newValue);
-    setCollapsed(newValue);
+    setCollapsed(true); // Set collapsed to true after changing the value
   };
+
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
@@ -88,7 +90,7 @@ Select.propTypes = {
   titleEmpty: PropTypes.bool,
   label: PropTypes.string,
   type: PropTypes.string,
-}
+};
 
 Select.defaultProps = {
   onChange: () => null,
@@ -96,6 +98,6 @@ Select.defaultProps = {
   label: "",
   type: "normal",
   name: "select",
-}
+};
 
 export default Select;
