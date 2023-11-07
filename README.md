@@ -19,4 +19,5 @@ Exécutez yarn start
 # Tests
 Exécutez yarn test
 
+# Explorer
 Je suis ravi de vous inviter à suivre notre parcours de développement pour améliorer le site web de 724events. Vos commentaires et suggestions sont les bienvenus. Restez à l'affût de nos progrès ! 🚀🎉
